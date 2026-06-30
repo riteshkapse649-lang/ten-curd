@@ -5,7 +5,7 @@ exports.getEmp = async (req,res) => {
         const data = await Emp.find()
         res.json({errors:false,data:data})
     } catch (error) {
-        res.status(500).json({errors:true,mesage:error.mesage})
+        res.status(500).json({errors:true,mesage:error.message})
     }
 }
 
@@ -14,7 +14,7 @@ exports.postEmp = async (req,res) => {
         const data = await Emp.create(req.body)
         res.json({errors:false,data:data})
     } catch (error) {
-        res.status(500).json({errors:true,message:error.mesage})
+        res.status(500).json({errors:true,message:error.message})
     }
 }
 
@@ -23,7 +23,7 @@ exports.putEmp = async (req,res) => {
         const data = await Emp.findByIdAndUpdate(req.params.id,req.body,{new:true})
         res.json({errors:false,data:data})
     } catch (error) {
-        res.status(500).json({errors:true,message:error.mesage})
+        res.status(500).json({errors:true,message:error.message})
     }
 }
 
@@ -32,6 +32,6 @@ exports.deleteEmp = async (req,res) => {
         const data = await Emp.findOneAndDelete(req.params.id)
         res.json({errors:false,data:data})
     } catch (error) {
-        res.status(500).json({errors:true,message:error.mesage})
+        res.status(500).json({errors:true,message:error.message})
     }
 }
