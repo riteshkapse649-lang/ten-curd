@@ -27,7 +27,7 @@ app.use("/api/event",eventRoute)
 app.use("/api/expance",expanceRoute)
 app.use("/api/system",systemRoute)
 app.use("/api/cart",cartRoute)
-app.listen(5000);
+app.listen(process.env.PORT);
 
 
 
