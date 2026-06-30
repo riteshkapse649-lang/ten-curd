@@ -5,7 +5,7 @@ exports.getStud = async (req,res) => {
         const data = await Stud.find()
         res.json({errors:false,data:data})
     } catch (error) {
-        res.status(500).json({errors:true,mesage:error.mesage})
+        res.status(500).json({errors:true,mesage:error.message})
     }
 }
 
@@ -23,7 +23,7 @@ exports.putStud = async (req,res) => {
         const data = await Stud.findByIdAndUpdate(req.params.id,req.body,{new:true})
         res.json({errors:false,data:data})
     } catch (error) {
-        res.status(500).json({errors:true,message:error.mesage})
+        res.status(500).json({errors:true,message:error.message})
     }
 }
 
@@ -32,6 +32,6 @@ exports.deleteStud = async (req,res) => {
         const data = await Stud.findByIdAndDelete(req.params.id)
         res.json({errors:false,data:data})
     } catch (error) {
-        res.status(500).json({errors:true,message:error.mesage})
+        res.status(500).json({errors:true,message:error.message})
     }
 }
