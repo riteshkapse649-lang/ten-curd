@@ -2,11 +2,11 @@ const mongoose = require("mongoose")
 
 const expanceSchema = new mongoose.Schema({
     price:{
-        type:Number,
+        type:String,
         required:true
     },
     tranctionId:{
-        type:Number,
+        type:String,
         required:true
     }
 },{timestamps:true})
