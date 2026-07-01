@@ -2,11 +2,11 @@ const mongoose = require("mongoose")
 
 const systemSchema = new mongoose.Schema({
     systemId:{
-        type:Number,
+        type:String,
         required:true
     },
     statusCode:{
-        type:Number,
+        type:String,
         required:true
     }
 },{timestamps:true})
