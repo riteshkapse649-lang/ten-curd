@@ -31,7 +31,7 @@ exports.putCart = async (req, res) => {
 
 exports.deleteCart = async (req, res) => {
   try {
-    const data = await Cart.findByIdAndUpdate(req.params.id);
+    const data = await Cart.findByIdAndDelete(req.params.id);
     res.json({ errors: false, data: data });
   } catch (error) {
     res.status(500).json({ errors: true, message: error.message });
