@@ -11,7 +11,7 @@ exports.getCart = async (req, res) => {
 
 exports.postCart = async (req, res) => {
   try {
-    const data = await Cart.create(req, res);
+    const data = await Cart.create(req.body);
     res.json({ errors: false, data: data });
   } catch (error) {
     res.status(500).json({ errors: true, message: error.message });
