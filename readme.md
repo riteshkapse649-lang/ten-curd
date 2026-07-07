@@ -1,3 +1,5 @@
+live at https://ten-curd-53pb.onrender.com
+
 ("/api/emp")
 "/api/stud"
 "/api/room"
